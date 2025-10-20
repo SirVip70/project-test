@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>خرید از سایت‌های خارجی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      background-color: #f0f2f5;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background-color: #e6f2ff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      color: #003366;
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+    .result {
+      margin-top: 2rem;
+      background-color: #e0f7fa;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 2rem;
+      background-color: #fff;
+      margin: 2rem auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card {
+      flex: 1 1 200px;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>سایت خرید از فروشگاه‌های خارجی</h1>
+  <nav>
+    <a href="#">خانه</a>
+    <a href="#">خدمات</a>
+    <a href="#">تعرفه‌ها</a>
+    <a href="#">سوالات متداول</a>
+    <a href="#">تماس با ما</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>خرید آسان از سایت‌های خارجی</h1>
+  <p>فقط لینک محصول را وارد کنید، قیمت نهایی را ببینید و پرداخت کنید!</p>
+</section>
+
+<div class="container">
+  <form id="priceForm">
+    <label for="link">لینک محصول:</label>
+    <input type="url" id="link" placeholder="مثال: https://www.shein.com/item/..." required>
+
+    <label for="currency">مرجع ارز:</label>
+    <select id="currency">
+      <option value="USD">دلار</option>
+      <option value="AED">درهم</option>
+      <option value="EUR">یورو</option>
+    </select>
+
+    <label for="weight">وزن تقریبی (گرم):</label>
+    <input type="number" id="weight" placeholder="مثلاً 500" required>
+
+    <button type="submit">محاسبه قیمت</button>
+  </form>
+
+  <div class="result" id="result" style="display:none;">
+    مبلغ نهایی به تومان: <span id="finalPrice">---</span>
+  </div>
+</div>
+
+<section class="section">
+  <h2>خدمات ما</h2>
+  <div class="cards">
+    <div class="card">خرید از سایت‌های خارجی</div>
+    <div class="card">پرداخت امن ریالی</div>
+    <div class="card">ارسال سریع</div>
+    <div class="card">پشتیبانی آنلاین</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>مراحل سفارش</h2>
+  <div class="cards">
+    <div class="card">ارسال لینک محصول</div>
+    <div class="card">محاسبه قیمت و پرداخت</div>
+    <div class="card">خرید توسط تیم ما</div>
+    <div class="card">تحویل درب منزل</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>محصولات ارسال فوری</h2>
+  <div class="cards">
+    <div class="card">کفش ورزشی نایک</div>
+    <div class="card">ساعت هوشمند شیائومی</div>
+    <div class="card">عطر دیور</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>نظرات مشتریان</h2>
+  <div class="cards">
+    <div class="card">«خیلی سریع و مطمئن بود، ممنون!»</div>
+    <div class="card">«قیمت نهایی دقیق بود، تجربه عالی داشتم.»</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>سوالات متداول</h2>
+  <div class="cards">
+    <div class="card">چطور لینک محصول را ارسال کنم؟</div>
+    <div class="card">هزینه حمل‌ونقل چطور محاسبه می‌شود؟</div>
+    <div class="card">چقدر زمان می‌برد تا کالا به دستم برسد؟</div>
+  </div>
+</section>
+
+<footer>
+  <p>تمامی حقوق محفوظ است © 2025</p>
+  <p>تماس: info@example.com | 021-12345678</p>
+</footer>
+
+<script>
+  document.getElementById('priceForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const currency = document.getElementById('currency').value;
+    const weight = parseFloat(document.getElementById('weight').value);
+    let rate = 0;
+
+    if (currency === 'USD') rate = 50000;
+    if (currency === 'AED') rate = 14000;
+    if (currency === 'EUR') rate = 55000;
+
+    const basePrice = rate * 1.2;
+    const shipping = weight * 20;
+    const total = basePrice + shipping;
+
+    document.getElementById('finalPrice').textContent = total.toLocaleString() + ' تومان';
+    document.getElementById('result').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
